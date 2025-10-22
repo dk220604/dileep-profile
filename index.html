@@ -6,11 +6,6 @@
   <title>Dileep Kumar | Strategic Finance & FP&A Leader</title>
   <meta name="description" content="Dileep Kumar (CMA, CSCA) — Strategic finance & FP&A leader in the UAE. Power BI & ERP transformations, real estate & airport retail F&B finance." />
   <meta name="theme-color" content="#0f172a" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Dileep Kumar | Strategic Finance & FP&A Leader" />
-  <meta property="og:description" content="CMA, CSCA | Director/Head of FP&A | ERP & BI Transformation | Airport Retail & F&B | Real Estate Finance" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
   <style>
     :root{
       --bg: #0b1220;
@@ -20,16 +15,10 @@
       --brand:#22d3ee;
       --accent:#a78bfa;
       --ring: #3b82f6;
-      --ok:#10b981;
-      --warn:#f59e0b;
-    }
-    @media (prefers-color-scheme: light){
-      :root{--bg:#f8fafc; --panel:#ffffff; --ink:#0f172a; --muted:#475569; --brand:#0891b2; --accent:#6d28d9}
-      body{background-image: radial-gradient(40rem 40rem at 20% -10%, #dbeafe 5%, transparent 60%),
-                                   radial-gradient(32rem 32rem at 110% -10%, #e9d5ff 5%, transparent 60%);}  
     }
     *{box-sizing:border-box}
     html,body{height:100%}
+    html{overflow-y:scroll;}
     body{
       margin:0; font:16px/1.6 ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background: var(--bg);
@@ -37,18 +26,30 @@
       background-image: radial-gradient(48rem 48rem at -10% -10%, rgba(34,211,238,.08), transparent 60%),
                         radial-gradient(40rem 40rem at 110% -10%, rgba(167,139,250,.08), transparent 60%);
     }
-    a{color:inherit}
-    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    a{color:inherit;text-decoration:none}
+    .wrap{
+      max-width:1280px;
+      width:min(1280px, 92vw);
+      margin-inline:auto;
+      padding:24px;
+    }
     header{position:sticky; top:0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 75%, transparent); z-index:40;}
     .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; border-bottom:1px solid color-mix(in oklab, var(--ink) 15%, transparent)}
-    .nav a{padding:6px 10px; border-radius:12px; text-decoration:none; color:var(--muted)}
+    .nav a{padding:6px 10px; border-radius:12px; color:var(--muted)}
     .nav a:hover{color:var(--ink); background:color-mix(in oklab, var(--ink) 12%, transparent)}
     .brand{display:flex; align-items:center; gap:14px}
     .dot{width:12px; height:12px; background:conic-gradient(from 180deg, var(--brand), var(--accent)); border-radius:50%; box-shadow:0 0 0 4px color-mix(in oklab, var(--brand) 15%, transparent)}
     .title{font-weight:800; letter-spacing:.2px}
 
-    .hero{display:grid; grid-template-columns:1.5fr 1fr; gap:28px; align-items:center; padding:48px 24px 12px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:28px;
+      align-items:center;
+      padding:48px 24px 12px;
+    }
+    .hero .card{max-width:860px;}
+
     .card{background: var(--panel); border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius:20px; padding:22px}
     .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; background:color-mix(in oklab, var(--ink) 10%, transparent); color:var(--ink); font-weight:600;}
     .muted{color:var(--muted)}
@@ -65,38 +66,18 @@
     h2{font-size:clamp(20px, 3vw, 26px); margin:0 0 14px; letter-spacing:.3px}
     .grid{display:grid; gap:18px}
     .two{grid-template-columns:1fr 1fr}
-    .three{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.two,.three{grid-template-columns:1fr}}
-
+    @media (max-width:900px){.two{grid-template-columns:1fr}}
     .timeline{display:grid; gap:14px}
     .job{position:relative; padding:16px; border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius:16px; background:color-mix(in oklab, var(--panel) 86%, black 14%)}
     .job small{color:var(--muted)}
     .job h3{margin:0 0 6px; font-size:18px}
     .list{display:grid; gap:8px; padding-left:18px}
     .list li{margin-left:4px}
-
     .pill{display:inline-block; padding:8px 10px; background:color-mix(in oklab, var(--ink) 8%, transparent); border-radius:999px; border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); font-weight:600}
     .skills{display:flex; flex-wrap:wrap; gap:10px}
-
     footer{padding:32px 24px 60px; text-align:center; color:var(--muted)}
     .divider{height:1px; background:color-mix(in oklab, var(--ink) 12%, transparent); margin:24px 0}
-    .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
   </style>
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dileep Kumar",
-    "jobTitle": "Strategic Finance & FP&A Leader",
-    "address": {"@type": "PostalAddress", "addressLocality": "Abu Dhabi", "addressCountry": "AE"},
-    "email": "mailto:dileepauh@gmail.com",
-    "telephone": "+971501753891",
-    "sameAs": [
-      "https://www.linkedin.com/in/dileep-kumar-76ba221a/"
-    ]
-  }
-  </script>
 </head>
 <body>
   <header>
@@ -117,50 +98,45 @@
   </header>
 
   <main class="wrap">
-    <!-- HERO -->
     <section class="hero">
       <div class="card">
         <span class="badge">CMA • CSCA</span>
         <h1 class="lead">Strategic Finance & FP&A Leader</h1>
-        <p class="sub">Director/Head of FP&A potential with 18+ years across Expo City Dubai, Lagardère Travel Retail, Lulu Group, and SFC. I build data‑driven planning, real‑time BI, and ERP‑enabled control to grow margin and speed decisions.</p>
-        <div class="chips" aria-label="focus areas">
-          <span class="chip">Airport Retail & F&amp;B</span>
+        <p class="sub">Director/Head of FP&A potential with 18+ years across Expo City Dubai, Lagardère Travel Retail, Lulu Group, and SFC. I build data-driven planning, real-time BI, and ERP-enabled control to grow margin and speed decisions.</p>
+        <div class="chips">
+          <span class="chip">Airport Retail & F&B</span>
           <span class="chip">Real Estate / Leasing</span>
           <span class="chip">Power BI & Excel</span>
           <span class="chip">SAP & D365</span>
           <span class="chip">Budgeting & Forecast</span>
-          <span class="chip">P&amp;L Ownership</span>
+          <span class="chip">P&L Ownership</span>
         </div>
         <div class="btns">
-          
-        
-        
-<a class="btn primary" href="#contact">Hire me</a>
+          <a class="btn primary" href="#contact">Hire me</a>
           <a class="btn" href="#experience">View experience</a>
-        <a class="btn" href="Dileep-Resume.pdf" download>Download Resume</a>
+          <a class="btn" href="https://dk220604.github.io/dileep-profile/Dileep-Resume.pdf" download>Download Resume</a>
         </div>
       </div>
-      <div class="card">
-        <h2 id="about">About</h2>
-        <p>Senior finance leader specialising in FP&amp;A, commercial finance, and cost management for large-scale events, retail, and real estate operations. Trusted partner to CEOs and VPs—aligning strategy to execution with clear P&amp;L visibility, scenario modelling, and dashboarding.</p>
+      <div class="card" id="about">
+        <h2>About</h2>
+        <p>Senior finance leader specialising in FP&A, commercial finance, and cost management for large-scale events, retail, and real estate operations. Trusted partner to CEOs and VPs—aligning strategy to execution with clear P&L visibility, scenario modelling, and dashboarding.</p>
         <ul class="list">
           <li>Reporting to VP/Board; led budgeting, monthly reviews, and performance packs.</li>
-          <li>Built Power BI suites (KPI scorecards, budget utilisation, S1/S2 P&amp;L, visitation).</li>
-          <li>ERP enablement: SAP &amp; Microsoft Dynamics 365 FO (AX R12) master data & COA setup.</li>
+          <li>Built Power BI suites (KPI scorecards, budget utilisation, S1/S2 P&L, visitation).</li>
+          <li>ERP enablement: SAP & Microsoft Dynamics 365 FO (AX R12) master data & COA setup.</li>
         </ul>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="timeline">
         <article class="job">
-          <h3>Manager FP&amp;A – Visitation & Programming (CMO)</h3>
+          <h3>Manager FP&A – Visitation & Programming (CMO)</h3>
           <small>Expo City Dubai • Apr 2024 – Present • Dubai/Abu Dhabi, UAE</small>
           <ul class="list">
-            <li>Own monthly/YTD P&amp;L reviews; drive insight-to-action with variance deep dives.</li>
-            <li>Automated dataflows & dashboards for leadership (ENE, Winter City, F&amp;B, events).</li>
+            <li>Own monthly/YTD P&L reviews; drive insight-to-action with variance deep dives.</li>
+            <li>Automated dataflows & dashboards for leadership (ENE, Winter City, F&B, events).</li>
             <li>Scenario modelling for cost allocation and margin optimisation.</li>
           </ul>
         </article>
@@ -169,23 +145,23 @@
           <h3>Commercial Finance / Cost Manager (Central Office)</h3>
           <small>Expo City Dubai • Oct 2021 – Mar 2024</small>
           <ul class="list">
-            <li>Steered budget control across multi‑million AED OPEX/Capex; ensured compliance & risk control.</li>
-            <li>Partnered on retail & real‑estate leasing finance (HOT reviews, deal modelling).</li>
+            <li>Steered budget control across multi-million AED OPEX/Capex; ensured compliance & risk control.</li>
+            <li>Partnered on retail & real-estate leasing finance (HOT reviews, deal modelling).</li>
             <li>Built Power BI reporting pack; improved forecast accuracy and cadence.</li>
           </ul>
         </article>
 
         <article class="job">
-          <h3>Finance Business Partner – Airport Retail &amp; F&amp;B</h3>
+          <h3>Finance Business Partner – Airport Retail & F&B</h3>
           <small>Lagardère Travel Retail • Prior</small>
           <ul class="list">
             <li>Supported store performance, menu engineering, labour & COGS optimisation.</li>
-            <li>Consolidated outlet P&amp;Ls; drove gross margin lift via pricing/mix actions.</li>
+            <li>Consolidated outlet P&Ls; drove gross margin lift via pricing/mix actions.</li>
           </ul>
         </article>
 
         <article class="job">
-          <h3>Earlier Roles – FP&amp;A / Cost Control</h3>
+          <h3>Earlier Roles – FP&A / Cost Control</h3>
           <small>Lulu Group • SFC • Others</small>
           <ul class="list">
             <li>Budgeting, MIS dashboards, inventory controls, and management reporting.</li>
@@ -194,46 +170,23 @@
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section id="highlights">
-      <h2>Selected Highlights</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>Analytics & Automation</h3>
-          <ul class="list">
-            <li>Rolled out Power BI scorecards & real‑time P&amp;L for executives.</li>
-            <li>Python-in-Excel utilities for F&amp;B and visitation analytics.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Value Creation</h3>
-          <ul class="list">
-            <li>Improved forecasting cadence and accuracy with automated dataflows.</li>
-            <li>Identified cost-out and mix gains in airport retail & events portfolios.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
-        <span class="pill">FP&amp;A & Budgeting</span>
-        <span class="pill">P&amp;L Ownership</span>
+        <span class="pill">FP&A & Budgeting</span>
+        <span class="pill">P&L Ownership</span>
         <span class="pill">Power BI / DAX</span>
         <span class="pill">Excel (Advanced)</span>
         <span class="pill">Python in Excel</span>
         <span class="pill">SAP</span>
         <span class="pill">Dynamics 365 FO / AX R12</span>
         <span class="pill">ERP Master Data & COA</span>
-        <span class="pill">Retail & F&amp;B Finance</span>
+        <span class="pill">Retail & F&B Finance</span>
         <span class="pill">Real Estate / Leasing Finance</span>
         <span class="pill">Stakeholder Management</span>
       </div>
     </section>
 
-    <!-- CERTS -->
     <section id="certs">
       <h2>Certifications</h2>
       <ul class="list">
@@ -243,7 +196,6 @@
       </ul>
     </section>
 
-    <!-- PROJECTS / PORTFOLIO -->
     <section id="projects">
       <h2>Projects & Portfolio</h2>
       <div class="grid two">
@@ -252,18 +204,17 @@
           <p class="muted">Executive Power BI pack for ENE portfolio with YTD/MTD, scorecards, and variance diagnostics.</p>
         </div>
         <div class="card">
-          <h3>F&amp;B P&amp;L Suite</h3>
-          <p class="muted">Menu engineering, outlet P&amp;Ls, and forecasting toolkit linking SAP/D365 exports to BI.</p>
+          <h3>F&B P&L Suite</h3>
+          <p class="muted">Menu engineering, outlet P&Ls, and forecasting toolkit linking SAP/D365 exports to BI.</p>
         </div>
       </div>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="divider"></div>
 
-    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Open to Director FP&amp;A, Head of Finance, or senior commercial finance roles in the UAE/GCC.</p>
+      <p>Open to Director FP&A, Head of Finance, or senior commercial finance roles in the UAE/GCC.</p>
       <p><strong>Email:</strong> <a href="mailto:dileepauh@gmail.com">dileepauh@gmail.com</a> &nbsp; | &nbsp; 
          <strong>Phone:</strong> <a href="tel:+971501753891">+971 50 175 3891</a> &nbsp; | &nbsp; 
          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dileep-kumar-76ba221a/">linkedin.com/in/dileep-kumar-76ba221a</a></p>
