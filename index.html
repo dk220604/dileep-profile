@@ -3,76 +3,103 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dileep Kumar | Strategic Finance & FP&A Leader</title>
-  <meta name="description" content="Dileep Kumar (CMA, CSCA) — Strategic finance & FP&A leader in the UAE. Power BI & ERP transformations, real estate & airport retail F&B finance." />
-  <meta name="theme-color" content="#0f172a" />
+  <title>Dileep Kumar Profile Overview</title>
+  <meta name="description" content="Dileep Kumar (CMA, CSCA) — Profile Overview showcasing strategic finance, FP&A, and leadership expertise in UAE/GCC markets." />
+  <meta name="theme-color" content="#0b1220" />
   <style>
     :root{
-      --bg: #0b1220;
-      --panel: #0f172a;
-      --ink: #e5e7eb;
-      --muted:#9ca3af;
-      --brand:#22d3ee;
-      --accent:#a78bfa;
-      --ring: #3b82f6;
+      --bg-dark: #0b1220;      /* side gutters */
+      --sheet: #ffffff;        /* centered sheet */
+      --panel: #f8fafc;        /* cards */
+      --ink: #1e3a8a;          /* headings navy */
+      --text: #111111;         /* body text */
+      --muted:#475569;         /* nav gray */
+      --muted-2:#64748b;       /* secondary text */
+      --border:#e2e8f0;        /* borders */
+      --accent1:#2563eb;       /* blue */
+      --accent2:#0891b2;       /* teal */
+      --chip:#e6eefc;
+      --chip-border:#c7d2fe;
+      --shadow: 0 26px 60px -24px rgba(0,0,0,.25);
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     html{overflow-y:scroll;}
     body{
-      margin:0; font:16px/1.6 ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--ink);
-      background-image: radial-gradient(48rem 48rem at -10% -10%, rgba(34,211,238,.08), transparent 60%),
-                        radial-gradient(40rem 40rem at 110% -10%, rgba(167,139,250,.08), transparent 60%);
+      margin:0; font:16px/1.65 ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg-dark);
+      color: var(--text);
     }
-    a{color:inherit;text-decoration:none}
+
+    /* White sheet centered behind content (keeps layout unchanged) */
+    .sheet-bg{
+      position: fixed;
+      top: 0; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: min(1280px, 92vw);
+      background: var(--sheet);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      z-index: 0;
+    }
+    header, main, footer{position:relative; z-index:1;}
+
     .wrap{
       max-width:1280px;
       width:min(1280px, 92vw);
       margin-inline:auto;
       padding:24px;
     }
-    header{position:sticky; top:0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 75%, transparent); z-index:40;}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; border-bottom:1px solid color-mix(in oklab, var(--ink) 15%, transparent)}
-    .nav a{padding:6px 10px; border-radius:12px; color:var(--muted)}
-    .nav a:hover{color:var(--ink); background:color-mix(in oklab, var(--ink) 12%, transparent)}
+
+    header{position:sticky; top:0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--sheet) 75%, transparent); z-index:40;}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; border-bottom:1px solid var(--border)}
+    .nav a{padding:6px 10px; border-radius:12px; color:var(--muted); text-decoration:none}
+    .nav a:hover{color:var(--ink); background:rgba(37,99,235,.10)}
+
     .brand{display:flex; align-items:center; gap:14px}
-    .dot{width:12px; height:12px; background:conic-gradient(from 180deg, var(--brand), var(--accent)); border-radius:50%; box-shadow:0 0 0 4px color-mix(in oklab, var(--brand) 15%, transparent)}
-    .title{font-weight:800; letter-spacing:.2px}
+    .dot{width:12px; height:12px; background:conic-gradient(from 180deg, var(--accent1), var(--accent2)); border-radius:50%; box-shadow:0 0 0 4px rgba(37,99,235,.15)}
+    .title{font-weight:900; letter-spacing:.2px; color:var(--ink); font-size:1.8rem; line-height:1.2;} /* increased size */
 
-/* HERO layout: 2 columns on large screens, 1 column on smaller */
-.hero{
-  display:grid;
-  grid-template-columns:1fr;          /* single column default */
-  gap:28px;
-  align-items:start;
-  padding:48px 24px 12px;
-}
+    /* HERO layout unchanged: 1 column mobile, 2 columns desktop */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:28px;
+      align-items:start;
+      padding:48px 24px 12px;
+    }
+    @media (min-width: 1100px){
+      .hero{ grid-template-columns:1.35fr 1fr; }
+    }
 
-/* switch to two columns for desktop */
-@media (min-width: 1100px){
-  .hero{
-    grid-template-columns:1.35fr 1fr; /* FP&A card + About card */
-  }
-}
+    .card{
+      background: var(--panel);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      box-shadow: var(--shadow);
+    }
 
-/* remove width limit that caused wrapping */
-.hero .card{
-  max-width:none;
-}
-
-    .card{background: var(--panel); border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius:20px; padding:22px}
-    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; background:color-mix(in oklab, var(--ink) 10%, transparent); color:var(--ink); font-weight:600;}
-    .muted{color:var(--muted)}
+    h1,h2,h3,.title{color:var(--ink)}
+    .muted{color:var(--muted-2)}
     .lead{font-size:clamp(26px, 4vw, 40px); line-height:1.2; font-weight:900; letter-spacing:.2px; margin:10px 0}
-    .sub{font-size:clamp(16px, 2.4vw, 18px); color:var(--muted)}
+    .sub{font-size:clamp(16px, 2.4vw, 18px);}
+
     .chips{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0}
-    .chip{border:1px solid color-mix(in oklab, var(--ink) 15%, transparent); padding:8px 12px; border-radius:999px; font-weight:600}
+    .chip{border:1px solid var(--chip-border); padding:8px 12px; border-radius:999px; font-weight:600; background:var(--chip); color:#1e293b}
+
     .btns{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
-    .btn{display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; border-radius:14px; padding:10px 14px; border:1px solid color-mix(in oklab, var(--ink) 20%, transparent)}
-    .btn.primary{background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 70%, black), color-mix(in oklab, var(--accent) 70%, black)); border:0; color:white}
-    .btn:hover{box-shadow:0 8px 24px -12px rgba(0,0,0,.6)}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px; font-weight:700;
+      border-radius:14px; padding:12px 16px; border:1px solid var(--border);
+      box-shadow: var(--shadow); text-decoration:none;
+    }
+    .btn.primary{
+      color:#ffffff; border:0;
+      background: linear-gradient(135deg, color-mix(in oklab, var(--accent1) 80%, white), color-mix(in oklab, var(--accent2) 80%, white));
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 18px 36px -18px rgba(2,132,199,.35)}
 
     section{padding:30px 24px}
     h2{font-size:clamp(20px, 3vw, 26px); margin:0 0 14px; letter-spacing:.3px}
@@ -80,23 +107,27 @@
     .two{grid-template-columns:1fr 1fr}
     @media (max-width:900px){.two{grid-template-columns:1fr}}
     .timeline{display:grid; gap:14px}
-    .job{position:relative; padding:16px; border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius:16px; background:color-mix(in oklab, var(--panel) 86%, black 14%)}
-    .job small{color:var(--muted)}
+    .job{position:relative; padding:16px; border:1px solid var(--border); border-radius:16px; background:#ffffff; box-shadow: var(--shadow)}
+    .job small{color:var(--muted-2)}
     .job h3{margin:0 0 6px; font-size:18px}
     .list{display:grid; gap:8px; padding-left:18px}
     .list li{margin-left:4px}
-    .pill{display:inline-block; padding:8px 10px; background:color-mix(in oklab, var(--ink) 8%, transparent); border-radius:999px; border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); font-weight:600}
+    .pill{display:inline-block; padding:8px 10px; background:#f1f5f9; border-radius:999px; border:1px solid var(--border); font-weight:600; color:#0f172a}
     .skills{display:flex; flex-wrap:wrap; gap:10px}
-    footer{padding:32px 24px 60px; text-align:center; color:var(--muted)}
-    .divider{height:1px; background:color-mix(in oklab, var(--ink) 12%, transparent); margin:24px 0}
+    footer{padding:0 24px 60px; text-align:center; color:var(--muted); border-top:1px solid var(--border)}
+    .divider{height:1px; background:var(--border); margin:24px 0}
+
+    .footer-bar{height:4px; background: linear-gradient(90deg, var(--accent1), var(--accent2)); border-radius: 999px; margin: 0 auto; max-width: 100%;}
   </style>
 </head>
 <body>
+  <div class="sheet-bg" aria-hidden="true"></div>
+
   <header>
     <nav class="nav wrap">
       <div class="brand">
         <span class="dot" aria-hidden="true"></span>
-        <strong class="title">Dileep Kumar</strong>
+        <strong class="title">Dileep Kumar Profile Overview</strong>
       </div>
       <div>
         <a href="#about">About</a>
@@ -110,9 +141,10 @@
   </header>
 
   <main class="wrap">
+    <!-- HERO -->
     <section class="hero">
       <div class="card">
-        <span class="badge">CMA • CSCA</span>
+        <span class="badge" style="background:#eef2ff;border:1px solid #c7d2fe;color:#1e293b;">CMA • CSCA</span>
         <h1 class="lead">Strategic Finance & FP&A Leader</h1>
         <p class="sub">Director/Head of FP&A potential with 18+ years across Expo City Dubai, Lagardère Travel Retail, Lulu Group, and SFC. I build data-driven planning, real-time BI, and ERP-enabled control to grow margin and speed decisions.</p>
         <div class="chips">
@@ -125,10 +157,11 @@
         </div>
         <div class="btns">
           <a class="btn primary" href="#contact">Hire me</a>
-          <a class="btn" href="#experience">View experience</a>
-          <a class="btn" href="https://dk220604.github.io/dileep-profile/Dileep-Resume.pdf" download>Download Resume</a>
+          <a class="btn primary" href="#experience">View experience</a>
+          <a class="btn primary" href="https://dk220604.github.io/dileep-profile/Dileep-Resume.pdf" download>Download Resume</a>
         </div>
       </div>
+
       <div class="card" id="about">
         <h2>About</h2>
         <p>Senior finance leader specialising in FP&A, commercial finance, and cost management for large-scale events, retail, and real estate operations. Trusted partner to CEOs and VPs—aligning strategy to execution with clear P&L visibility, scenario modelling, and dashboarding.</p>
@@ -140,6 +173,7 @@
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="timeline">
@@ -182,6 +216,7 @@
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
@@ -199,6 +234,7 @@
       </div>
     </section>
 
+    <!-- CERTS -->
     <section id="certs">
       <h2>Certifications</h2>
       <ul class="list">
@@ -208,6 +244,7 @@
       </ul>
     </section>
 
+    <!-- PROJECTS / PORTFOLIO -->
     <section id="projects">
       <h2>Projects & Portfolio</h2>
       <div class="grid two">
@@ -217,13 +254,14 @@
         </div>
         <div class="card">
           <h3>F&B P&L Suite</h3>
-          <p class="muted">Menu engineering, outlet P&Ls, and forecasting toolkit linking SAP/D365 exports to BI.</p>
+          <p class="muted">Menu engineering, outlet P&L, and forecasting toolkit linking SAP/D365 exports to BI.</p>
         </div>
       </div>
     </section>
 
     <div class="divider"></div>
 
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Open to Director FP&A, Head of Finance, or senior commercial finance roles in the UAE/GCC.</p>
@@ -232,13 +270,14 @@
          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dileep-kumar-76ba221a/">linkedin.com/in/dileep-kumar-76ba221a</a></p>
       <div class="btns">
         <a class="btn primary" href="mailto:dileepauh@gmail.com?subject=Opportunity%20for%20Strategic%20Finance%20Leadership">Email me</a>
-        <a class="btn" href="#top">Back to top</a>
+        <a class="btn primary" href="#top">Back to top</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Dileep Kumar • CMA • CSCA</p>
+  <footer class="wrap" style="background:transparent;">
+    <div class="footer-bar"></div>
+    <p style="color:var(--muted-2); margin-top:14px;">© 2025 Dileep Kumar • CMA • CSCA</p>
   </footer>
 </body>
 </html>
