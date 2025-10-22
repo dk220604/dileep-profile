@@ -41,14 +41,26 @@
     .dot{width:12px; height:12px; background:conic-gradient(from 180deg, var(--brand), var(--accent)); border-radius:50%; box-shadow:0 0 0 4px color-mix(in oklab, var(--brand) 15%, transparent)}
     .title{font-weight:800; letter-spacing:.2px}
 
-    .hero{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:28px;
-      align-items:center;
-      padding:48px 24px 12px;
-    }
-    .hero .card{max-width:860px;}
+/* HERO layout: 2 columns on large screens, 1 column on smaller */
+.hero{
+  display:grid;
+  grid-template-columns:1fr;          /* single column default */
+  gap:28px;
+  align-items:start;
+  padding:48px 24px 12px;
+}
+
+/* switch to two columns for desktop */
+@media (min-width: 1100px){
+  .hero{
+    grid-template-columns:1.35fr 1fr; /* FP&A card + About card */
+  }
+}
+
+/* remove width limit that caused wrapping */
+.hero .card{
+  max-width:none;
+}
 
     .card{background: var(--panel); border:1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius:20px; padding:22px}
     .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; background:color-mix(in oklab, var(--ink) 10%, transparent); color:var(--ink); font-weight:600;}
